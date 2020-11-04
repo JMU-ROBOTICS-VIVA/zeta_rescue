@@ -15,12 +15,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         Node(
-            package="jmu_turtlebot3_bringup",
-            node_executable="tb_fixer",
-            node_name="tb_fixer",
-            output="screen",
-        ),
-        Node(
             package="rviz2",
             node_executable="rviz2",
             node_name="rviz2",

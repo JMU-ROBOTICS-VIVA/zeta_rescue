@@ -7,8 +7,8 @@ Panels:
         - /Global Options1
         - /TF1/Frames1
         - /Navigation1
-        - /Navigation1/Global Map1/Path1
-        - /Navigation1/Local Map1/Path1
+        - /Navigation1/Global Planner1/Path1
+        - /Navigation1/Local Planner1/Path1
       Splitter Ratio: 0.5794117450714111
     Tree Height: 494
   - Class: rviz_common/Selection
@@ -138,11 +138,11 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /received_global_plan
+              Topic: /plan
               Unreliable: true
               Value: true
           Enabled: true
-          Name: Global Map
+          Name: Global Planner
         - Class: rviz_common/Group
           Displays:
             - Alpha: 1
@@ -187,7 +187,7 @@ Visualization Manager:
               Unreliable: false
               Value: true
           Enabled: true
-          Name: Local Map
+          Name: Local Planner
         - Alpha: 1
           Arrow Length: 0.05000000074505806
           Axes Length: 0.30000001192092896
@@ -197,12 +197,12 @@ Visualization Manager:
           Enabled: true
           Head Length: 0.07000000029802322
           Head Radius: 0.029999999329447746
-          Name: PoseArray
+          Name: Particles
           Shaft Length: 0.23000000417232513
           Shaft Radius: 0.009999999776482582
           Shape: Arrow (Flat)
           Topic: /particlecloud
-          Unreliable: false
+          Unreliable: true
           Value: true
       Enabled: true
       Name: Navigation
@@ -306,22 +306,6 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
-    - Alpha: 1
-      Arrow Length: 0.029999999329447746
-      Axes Length: 0.30000001192092896
-      Axes Radius: 0.009999999776482582
-      Class: rviz_default_plugins/PoseArray
-      Color: 0; 180; 0
-      Enabled: true
-      Head Length: 0.07000000029802322
-      Head Radius: 0.029999999329447746
-      Name: Particles
-      Shaft Length: 0.23000000417232513
-      Shaft Radius: 0.009999999776482582
-      Shape: Arrow (Flat)
-      Topic: /particlecloud
-      Unreliable: true
-      Value: true
     - Class: rviz_default_plugins/Camera
       Enabled: true
       Image Rendering: background and overlay
@@ -337,19 +321,18 @@ Visualization Manager:
         Map: true
         Markers: true
         Navigation:
-          Global Map:
+          Global Planner:
             Map: true
             Path: true
             Value: true
-          Local Map:
+          Local Planner:
             Map: true
             Path: true
             Polygon: true
             Value: true
-          PoseArray: true
+          Particles: true
           Value: true
         Odometry: true
-        Particles: true
         RobotModel: true
         TF: true
         Value: true
