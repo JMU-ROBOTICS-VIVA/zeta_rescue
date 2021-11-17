@@ -18,7 +18,7 @@ def generate_launch_description():
         
         Node(
             package="zeta_rescue",
-            node_executable="rescue_node",
+            executable="rescue_node",
             output="screen",
             parameters=[{'time_limit':  LaunchConfiguration('time_limit')}]
         )
