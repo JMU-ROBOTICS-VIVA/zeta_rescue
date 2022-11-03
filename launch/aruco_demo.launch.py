@@ -14,7 +14,7 @@ def generate_launch_description():
     # We need to get the path to the .rviz file...
     this_prefix = get_package_share_directory('zeta_rescue')
     rviz_path = os.path.join(this_prefix, 'rviz', 'aruco_foxy.rviz')
-    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
     return LaunchDescription([
         Node(
