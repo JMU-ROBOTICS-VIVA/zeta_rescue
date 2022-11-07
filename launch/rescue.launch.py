@@ -1,7 +1,7 @@
 """Launch the Zeta rescue system 
 
 You can make any changes you want to this launch file, but it must
-accept the time_limit command line argument.
+accept the time_limit and use_sim_time command line arguments.
 
 """
 
@@ -15,12 +15,14 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('time_limit', default_value='360'),
+        DeclareLaunchArgument('use_sim_time', default_value='true'),
         
         Node(
             package="zeta_rescue",
             executable="rescue_node",
             output="screen",
-            parameters=[{'time_limit':  LaunchConfiguration('time_limit')}]
+            parameters=[{'time_limit':  LaunchConfiguration('time_limit'),
+                         'use_sim_time': LaunchConfiguration('use_sim_time'),}]
         )
 
     ])
